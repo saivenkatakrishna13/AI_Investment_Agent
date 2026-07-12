@@ -3,7 +3,15 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianG
 
 const PriceChart = ({ historicalData }) => {
   if (!historicalData || historicalData.length === 0) {
-    return null;
+    return (
+      <div className="bg-slate-800 rounded-2xl p-6 border border-slate-700 shadow-sm mb-6 flex flex-col h-[400px] items-center justify-center text-center">
+        <h3 className="text-lg font-bold text-slate-100 mb-2 font-serif">6-Month Price History</h3>
+        <div className="flex-1 flex flex-col items-center justify-center text-slate-400">
+          <p className="mb-2">⚠️ Chart Data Unavailable</p>
+          <p className="text-sm">You may have hit the Alpha Vantage free API limit (25 requests/day) or entered an invalid ticker.</p>
+        </div>
+      </div>
+    );
   }
 
   // Calculate min and max for a better domain, providing some padding
