@@ -96,3 +96,4 @@ The application will be accessible via a local URL (typically `http://localhost:
 3. Dockerize both frontend and backend for a simpler one-command startup process (`docker-compose up`).
 4. Implement WebSockets for streaming Gemini responses (Server-Sent Events) so the user sees analysis generating in real-time instead of waiting for a single long request.
 # AI_Investment_Agent
+# AI_Investment_Agent
