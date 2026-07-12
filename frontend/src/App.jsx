@@ -22,7 +22,11 @@ function App() {
     setResult(null);
 
     try {
-      const response = await axios.post('http://localhost:5001/api/research', {
+      const API_URL = import.meta.env.PROD 
+        ? '/api/research' 
+        : 'http://localhost:5001/api/research';
+        
+      const response = await axios.post(API_URL, {
         company: query
       });
       setResult(response.data);
