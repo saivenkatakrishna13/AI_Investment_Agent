@@ -2,7 +2,6 @@
 
 An intelligent, full-stack financial analysis engine that aggregates real-time market telemetry, news sentiment, and core financial metrics to generate actionable investment recommendations.
 
-Designed and implemented for the **InsideIIM × Altuni AI Labs AI Product Development Engineer** evaluation.
 
 ---
 
