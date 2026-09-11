@@ -5,6 +5,11 @@ const dotenv = require('dotenv');
 // Load environment variables
 dotenv.config();
 
+// Prevent local proxy/VPN SSL inspection certificates from failing outbound financial API requests
+if (process.env.NODE_TLS_REJECT_UNAUTHORIZED === undefined) {
+  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+}
+
 const app = express();
 const port = process.env.PORT || 5000;
 
